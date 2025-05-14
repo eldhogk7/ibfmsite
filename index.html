@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header class="site-header">
@@ -40,7 +41,7 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container hero-container">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-up">
                 <h1>Welcome to the world of <span class="highlight">IOT</span></h1>
                 <p class="hero-text">
                     This is the new innovation that makes you so easy use of technology and easy processing 
@@ -49,7 +50,7 @@
                 <a href="#" class="btn-primary">Learn more</a>
             </div>
             
-            <div class="hero-images">
+            <div class="hero-images" data-aos="fade-left">
                 <!-- Top badge -->
                 <div class="badge badge-top" id="badgeTop">
                     <p>IOT refined by IBFM</p>
@@ -82,10 +83,10 @@
                 </div>
                 
                 <!-- Bottom badge -->
-               <div class="badge badge-bottom" id="badgeBottom">
+               <!-- <div class="badge badge-bottom" id="badgeBottom">
                     <p>IOT refined by IBFM</p>
                     <p>Hardware+software</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -111,20 +112,20 @@
     <div class="iot-cards">
   <div class="iot-card-wrapper">
     <div class="bar-decor bar-left"></div>
-    <div class="iot-card">
+    <div class="iot-card" data-aos="fade-right">
       <img src="./assets/images/hand-soil.jpg" alt="pH Control" />
     </div>
   </div>
 
   <div class="iot-card-wrapper middle-card">
-    <div class="iot-card">
+    <div class="iot-card" data-aos="fade-down">
       <img src="./assets/images/laptop-nature-concept.jpg" alt="Mouse on Landscape" />
     </div>
   </div>
 
   <div class="iot-card-wrapper">
     <div class="bar-decor bar-right"></div>
-    <div class="iot-card">
+    <div class="iot-card" data-aos="fade-left">
       <img src="./assets/images/robot-arm-planting-tree-green-field.jpg" alt="Robot and Plant" />
     </div>
   </div>
@@ -135,45 +136,249 @@
     
    <section class="iot-features-section">
         <div class="feature-section">
-            <div class="title-section">
+            <div class="title-section"  data-aos="zoom-in">
                 <h1>Our unique features</h1>
             </div>
             
             <div class="content-wrapper">
-                <div class="text-content">
+                <div class="text-content"  data-aos="zoom-in">
                     <h2>Helping for farming</h2>
-                    <p>we intoduce our new powerfull IOT soil tester that <br> especialy for farmers to find the ph, k2, so2 of soil <br> without any strugle within limited time</p>
+                    <p>
+                        We introduce our new powerful IoT soil tester that is especially designed for farmers to find the pH, K₂, SO₂ levels of soil without any struggle, all within a limited time.
+                    </p>
                 </div>
+
                 
                 <div class="visual-content">
                     <div class="hexagon-bg"></div>
                     <div class="device-illustration">
                         <img src="./assets/images/iotdevice.gif" alt="IoT Device Illustration">
                     </div>
+                    <div class="hexagon-bg2"></div>
                 </div>
             </div>
             
             <!-- SVG Wave Section -->
             <div class="wave-container">
                 <!-- SVG Wave -->
-                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000000" fill-opacity="1" d="M0,160L34.3,138.7C68.6,117,137,75,206,85.3C274.3,96,343,160,411,197.3C480,235,549,245,617,256C685.7,267,754,277,823,261.3C891.4,245,960,203,1029,165.3C1097.1,128,1166,96,1234,96C1302.9,96,1371,128,1406,144L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+                 <svg id="wave"  style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 240" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 0, 0, 1)" offset="0%"></stop><stop stop-color="rgba(0, 0, 0, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,24L34.3,36C68.6,48,137,72,206,104C274.3,136,343,176,411,176C480,176,549,136,617,124C685.7,112,754,128,823,144C891.4,160,960,176,1029,172C1097.1,168,1166,144,1234,132C1302.9,120,1371,120,1440,132C1508.6,144,1577,168,1646,164C1714.3,160,1783,128,1851,128C1920,128,1989,160,2057,176C2125.7,192,2194,192,2263,172C2331.4,152,2400,112,2469,84C2537.1,56,2606,40,2674,60C2742.9,80,2811,136,2880,132C2948.6,128,3017,64,3086,64C3154.3,64,3223,128,3291,156C3360,184,3429,176,3497,148C3565.7,120,3634,72,3703,52C3771.4,32,3840,40,3909,68C3977.1,96,4046,144,4114,136C4182.9,128,4251,64,4320,64C4388.6,64,4457,128,4526,144C4594.3,160,4663,128,4731,108C4800,88,4869,80,4903,76L4937.1,72L4937.1,240L4902.9,240C4868.6,240,4800,240,4731,240C4662.9,240,4594,240,4526,240C4457.1,240,4389,240,4320,240C4251.4,240,4183,240,4114,240C4045.7,240,3977,240,3909,240C3840,240,3771,240,3703,240C3634.3,240,3566,240,3497,240C3428.6,240,3360,240,3291,240C3222.9,240,3154,240,3086,240C3017.1,240,2949,240,2880,240C2811.4,240,2743,240,2674,240C2605.7,240,2537,240,2469,240C2400,240,2331,240,2263,240C2194.3,240,2126,240,2057,240C1988.6,240,1920,240,1851,240C1782.9,240,1714,240,1646,240C1577.1,240,1509,240,1440,240C1371.4,240,1303,240,1234,240C1165.7,240,1097,240,1029,240C960,240,891,240,823,240C754.3,240,686,240,617,240C548.6,240,480,240,411,240C342.9,240,274,240,206,240C137.1,240,69,240,34,240L0,240Z"></path>
                 </svg>
-        
                 <!-- Circle Images -->
-                <div class="circle-image left">
+                <div class="circle-image left" data-aos="flip-up" >
                     <img src="./assets/images/waveimage-1.jpg" alt="Soil Technology">
                 </div>
                 
-                <div class="circle-image center">
+                <div class="circle-image center" >
                     <img src="./assets/images/waveimage-2.jpg" alt="Plant Growth Technology">
                 </div>
                 
-                <div class="circle-image right">
+                <div class="circle-image right" data-aos="flip-up" >
                     <img src="./assets/images/waveimage-3.jpg" alt="Modern Farming">
                 </div>
+                
             </div>
         </div>
     </section>
+
+    <section class="cards-section">
+        <div class="header">
+            <h1>Our IoT Applied Other Fields</h1>
+        </div>
+        
+        <!-- First Row: Transportation and Smart Cities -->
+        <div class="row">
+            <!-- Transportation Card -->
+            <div class="col">
+                <div class="card " >
+                    <div class="hover-bg"></div>
+                    <div class="card-content transport">
+                        <h2 class="card-title">Transportation</h2>
+                        <p class="card-text">Vehicle tracking</p><br>
+                        <p class="card-text">Driver Behaviour</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="./assets/images/transptation.svg" alt="Transportation IoT">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Smart Cities Card -->
+            <div class="col">
+                <div class="card ">
+                    <div class="hover-bg"></div>
+                    <div class="card-content smartcity">
+                        <h2 class="card-title">Smart cities</h2>
+                        <p class="card-text">Vehicle tracking</p>
+                        <p class="card-text">Environmental monitoring</p>
+                        <p class="card-text">Road traffic & transport</p>
+                        <p class="card-text">Social & security</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="./assets/images/smartcity.svg" alt="Smart Cities IoT">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Row: Utilities and Buildings -->
+        <div class="row">
+            <!-- Utilities Card -->
+            <div class="col">
+                <div class="card ">
+                    <div class="hover-bg"></div>
+                    <div class="card-content utilities">
+                        <h2 class="card-title">Utilities</h2>
+                        <p class="card-text">Smart grid</p>
+                        <p class="card-text">Water & waste Monitoring</p>
+                        <p class="card-text">Power line monitoring</p>
+                        <p class="card-text">Supply chain Management</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="./assets/images/Electrician-cuate.svg" alt="Utilities IoT">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Buildings Card -->
+            <div class="col">
+                <div class="card ">
+                    <div class="hover-bg"></div>
+                    <div class="card-content buildings">
+                        <h2 class="card-title">Buildings</h2>
+                        <p class="card-text">Energy efficiency & HAVC</p>
+                        <p class="card-text">Location based information</p>
+                        <p class="card-text">Occupancy monitoring</p>
+                        <p class="card-text">Operation & maintenance</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="./assets/images/Building-cuate.svg" alt="Buildings IoT">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Third Row: Manufacturing -->
+        <div class="row manufacturing-row">
+            <!-- Manufacturing Card -->
+            <div class="col manufacturing-card" >
+                <div class="card ">
+                    <div class="hover-bg"></div>
+                    <div class="card-content manufacturing">
+                        <h2 class="card-title">Manufacturing</h2>
+                        <p class="card-text">Supply chain management</p>
+                        <p class="card-text">Predictive maintenance</p>
+                        <p class="card-text">OEE Monitoring</p>
+                        <p class="card-text">Energy Efficiency</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="./assets/images/Group.svg" alt="Manufacturing IoT">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </section>
+
+
+    <section class="contributors-section">
+      <div class="contributors-header">
+          <h2 class="ghost-text">Contributors</h2>
+          <div class="icon-wrapper">
+            <img src="./assets/images/handshake.png" alt="Handshake Icon" />
+          </div>
+        </div>
+
+
+
+<div class="contributors-logos">
+  <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" />
+  <img src="./assets/images/tata-logo.webp" alt="Tata Logo" / style="height: 25px;">
+  <img src="./assets/images/premier-logo-resized.png" alt="Premier" / style="height: 50px;">
+  <img src="./assets/images/hifell-logo.webp" alt="Cisco" />
+  <img src="./assets/images/biota.png" alt="Divine" />
+</div>
+
+ <div class="triple-section">
+  <!-- Analyze -->
+  <div class="card1-section">
+    <div class="card1-text" data-aos="fade-right"
+     >
+      <h3><span class="letter-a red">A</span>nalyze</h3>
+      <p>to do the all information will capture and invation can be the seriosly done with secure</p>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="card1-img" data-aos="fade-left"
+   >
+      <img src="./assets/images/analyse-image.svg" alt="Analyze Image">
+    </div>
+  </div>
+
+  <!-- Accure -->
+  <div class="card1-section Accure">
+    
+    
+    <div class="card1-img" data-aos="fade-right">
+      <img src="./assets/images/grammar correction-rafiki 1.svg" alt="Accure Image">
+    </div>
+    <div class="vertical-line"></div>
+    <div class="card1-text" data-aos="fade-left">
+      <h3><span class="letter-a blue">A</span>ccure</h3>
+      <p>to do the all information will capture and invation can be the seriosly done with secure</p>
+    </div>
+  </div>
+
+  <!-- Alert -->
+  <div class="card1-section">
+    <div class="card1-text" data-aos="fade-right">
+      <h3><span class="letter-a green">A</span>lert</h3>
+      <p>to do the all information will capture and invation can be the seriosly done with secure</p>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="card1-img" data-aos="fade-left">
+      <img src="./assets/images/Warning-rafiki 1.svg" alt="Alert Image">
+    </div>
+  </div>
+  <br><br>
+</div>
+
+
+
+</section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="company-info">
+                    <h3>Acme Corporation</h3>
+                    <p>123 Business Avenue</p>
+                    <p>Suite 400</p>
+                    <p>New York, NY 10001</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: info@acmecorp.com</p>
+                </div>
+                
+                <div class="quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Acme Corporation. All Rights Reserved.</p>
+            </div>
+        </footer>
+  
+
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
     <script>
         // Toggle mobile navigation
@@ -185,38 +390,8 @@
             navToggle.setAttribute('aria-expanded', !isExpanded);
             primaryNav.classList.toggle('show');
         });
-        function positionBadges() {
-    const mainImage = document.getElementById('mainImage');
-    const soilSensor = document.getElementById('soilSensor');
-    const badgeTop = document.getElementById('badgeTop');
-    const badgeMiddle = document.getElementById('badgeMiddle');
-    const badgeBottom = document.getElementById('badgeBottom');
+       
 
-    if (!mainImage || !soilSensor || !badgeTop || !badgeMiddle || !badgeBottom) return;
-
-    const mainRect = mainImage.getBoundingClientRect();
-    const soilRect = soilSensor.getBoundingClientRect();
-
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-    // Top badge - place above main image
-    badgeTop.style.top = `${mainRect.top + scrollTop - badgeTop.offsetHeight - 10}px`;
-    badgeTop.style.left = `${mainRect.left}px`;
-
-    // Middle badge - center between both images
-    const middleTop = (mainRect.bottom + soilRect.top) / 2 + scrollTop - (badgeMiddle.offsetHeight / 2);
-    const middleLeft = (mainRect.left + soilRect.left) / 2;
-    badgeMiddle.style.top = `${middleTop}px`;
-    badgeMiddle.style.left = `${middleLeft}px`;
-
-    // Bottom badge - below soil sensor
-    badgeBottom.style.top = `${soilRect.bottom + scrollTop + 10}px`;
-    badgeBottom.style.left = `${soilRect.left}px`;
-}
-
-window.addEventListener('load', positionBadges);
-window.addEventListener('resize', positionBadges);
-window.addEventListener('scroll', positionBadges);
     </script>
 </body>
 </html>
