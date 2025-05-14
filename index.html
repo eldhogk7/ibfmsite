@@ -25,7 +25,7 @@
             <nav class="main-nav">
                 <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                     <span class="sr-only">Menu</span>
-                    <i class="fa-solid fa-bars"></i>
+                     <i class="fa-solid fa-bars" id="menu-icon"></i>
                 </button>
                 
                 <ul id="primary-navigation" class="nav-list">
@@ -382,14 +382,20 @@
 
     <script>
         // Toggle mobile navigation
-        const navToggle = document.querySelector('.mobile-nav-toggle');
-        const primaryNav = document.getElementById('primary-navigation');
-        
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', !isExpanded);
-            primaryNav.classList.toggle('show');
-        });
+     const navToggle = document.querySelector('.mobile-nav-toggle');
+const primaryNav = document.getElementById('primary-navigation');
+const menuIcon = document.getElementById('menu-icon');
+
+navToggle.addEventListener('click', () => {
+  const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.setAttribute('aria-expanded', !isExpanded);
+  primaryNav.classList.toggle('show');
+
+  // Toggle icon between hamburger and cross
+  menuIcon.classList.toggle('fa-bars');
+  menuIcon.classList.toggle('fa-xmark');
+});
+
        
 
     </script>
