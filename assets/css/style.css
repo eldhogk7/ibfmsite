@@ -1628,3 +1628,9 @@ background: linear-gradient(to right, #000000, #000000);
                 margin-bottom: 20px;
             }
         }
+
+img {
+  pointer-events: none; /* Prevent interaction */
+  user-select: none;    /* Prevent selecting */
+  -webkit-user-drag: none; /* Prevent image drag */
+}
