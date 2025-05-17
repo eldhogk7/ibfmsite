@@ -157,7 +157,7 @@ ul {
   width: 100%;
   background: 
     linear-gradient(to bottom, black 0%, transparent 0%, transparent 85%, black 100%),
-    radial-gradient(circle at center, #00EAFF 0%, #3C8CE7 0%, #000000 85%);
+    radial-gradient(circle at center, #00EAFF 0%, #0e5973 0%, #000000 55%);
     display: flex;
 }
 
@@ -1361,6 +1361,7 @@ ul {
   width: 100%;
   z-index: 0;
   pointer-events: none;
+  opacity: 0.3;
 }
 
 
