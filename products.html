@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>i cloud by Abhram</title>
     <link rel="stylesheet" href="./assets/css/products.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-          <link rel="icon" href="./assets/images/ibfm-logo.png" type="image/x-icon">
+          <link rel="icon" href="./assets/images/ibfm-new-logo.png" type="image/x-icon">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 
 </head>
 <body>
+    
 <header class="site-header">
         <div class="container" >
             <div class="logo-container">
                 <a href="./index.html" class="logo">
-                    <img src="./assets/images/ibfm-logo.png" alt="IBFM Logo">
+                    <img src="./assets/images/ibfm-new-logo.png" alt="IBFM Logo">
                 </a>
             </div>
             
@@ -33,7 +38,7 @@
                 <ul id="primary-navigation" class="nav-list">
                     <li class="nav-item "><a href="./index.html">Home</a></li>
                     <li class="nav-item active"><a href="product.html">Product</a></li>
-                    <li class="nav-item"><a href="about.html">About</a></li>
+                    <li class="nav-item"><a href="/aboutus.html">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -92,7 +97,7 @@
             <p>we provide the notification alert system</p>
             
             <div class="dashboard-preview" data-aos="zoom-in">
-                <img src="./assets/images/computer.jpg" alt="Dashboard on multiple devices">
+                <img src="./assets/images/computer.png" alt="Dashboard on multiple devices">
             </div>
         </div>
         
@@ -345,53 +350,78 @@
 </section>
 
 
-    <footer>
-            <div class="footer-content" data-aos="fade-up">
-                <div class="company-info">
-                    <h3>Abhram Technologies</h3>
-                    <p>123 Business Avenue</p>
-                    <p>Suite 400</p>
-                    <p>India, IN 10001</p>
-                    <p>Phone: (91) 123-4567</p>
-                    <p>Email: io@abhram.com</p>
-                </div>
-                
-                <div class="quick-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Products</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 Abhram Technologies. All Rights Reserved.</p>
-            </div>
-        </footer>
+<footer class="footer" >
+  <div class="footer-container" data-aos="fade-up">
+    <div class="footer-column about">
+      <img src="./assets/images/ibfm-new-logo.png" alt="Abhram Logo" class="footer-logo" />
+      <p>
+        Abhram Technologies pioneers transformative solutions, seamlessly integrating AI, robotics, and cloud services to redefine technological landscapes.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><span>▶</span> <a href="/">Home</a></li>
+        <li><span>▶</span> <a href="./products.html">Products</a></li>
+        <li><span>▶</span> <a href="./aboutus.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><span>▶</span> <a href="https://www.abhram.com/privacy.html">Privacy Policy</a></li>
+        <li><span>▶</span> <a href="https://www.abhram.com/disclaimer.html">Disclaimer</a></li>
+        <li><span>▶</span> <a href="https://www.abhram.com/faq.html">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Connect Us</h3>
+      <p>Kallarikkl building, Arpana Nagar,<br>Palluruthy, Kochi, 682006</p>
+      <p>Mail us: <a href="mailto:io@abhram.com">io@abhram.com</a></p>
+      <p>Call Us: <a href="tel:+919961638639">(+91) 9961 638 639</a></p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/people/Abhram/61552439575358/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/Abhram_Tech"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/abhram_technologies?igsh=NGVhN2U2NjQ0Yg%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/abhram-technologies/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
           <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+<script>
+  // Scroll event - always active
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('.site-header');
+    console.log("Scrolling");
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
 
-        <script>
-        // Toggle mobile navigation
-     const navToggle = document.querySelector('.mobile-nav-toggle');
-const primaryNav = document.getElementById('primary-navigation');
-const menuIcon = document.getElementById('menu-icon');
+  // Mobile nav toggle logic
+  const navToggle = document.querySelector('.mobile-nav-toggle');
+  const primaryNav = document.getElementById('primary-navigation');
+  const menuIcon = document.getElementById('menu-icon');
 
-navToggle.addEventListener('click', () => {
-  const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-  navToggle.setAttribute('aria-expanded', !isExpanded);
-  primaryNav.classList.toggle('show');
+  navToggle.addEventListener('click', () => {
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
+    primaryNav.classList.toggle('show');
 
-  // Toggle icon between hamburger and cross
-  menuIcon.classList.toggle('fa-bars');
-  menuIcon.classList.toggle('fa-xmark');
-});
+    // Toggle icon between hamburger and cross
+    menuIcon.classList.toggle('fa-bars');
+    menuIcon.classList.toggle('fa-xmark');
+  });
+</script>
 
-       
-
-    </script>
 </body>
 </html>

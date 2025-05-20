@@ -1,0 +1,693 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Reset approach - place this at the end of your CSS file */
+html {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: clip; /* Modern alternative to hidden */
+  max-width: 100vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* AOS specific fixes without breaking animations */
+[data-aos], [data-aos-delay], [data-aos-easing], [data-aos-duration] {
+  max-width: 100%;
+  /* Removed the transform: none !important that was breaking animations */
+}
+
+/* Make sure AOS containers don't add horizontal overflow */
+.aos-init, .aos-animate {
+  max-width: 100%;
+}
+
+/* Target AOS wrapper if it exists */
+[data-aos-container], .aos-initialized {
+  max-width: 100%;
+}
+
+/* Optional but recommended - prevent AOS animations from causing overflow */
+.aos-animate {
+  /* Contains the animations without breaking them */
+  overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    position: relative;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.vision .section-title {
+    color: #ff5722;
+    border-bottom: 2px solid #ff5722;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.mission .section-title {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.achievements .section-title,
+.contact .section-title,
+.query .section-title {
+     background: linear-gradient(to bottom, #60EFFF, #407BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header Styles */
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('../images/about-us-header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 20, 40, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+     background: linear-gradient(to bottom, #60EFFF, #407BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+
+}
+
+.hero h1 {
+    font-size: 72px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.quote {
+    position: relative;
+    border: 2px dotted #407BFF;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: transparent;
+    font-style: italic;
+    color: #ffffff;
+    max-width: 600px;
+}
+
+.quote-icon {
+    position: absolute;
+    font-size: 2rem;
+    color: #d1f502;
+    opacity: 0.8;
+}
+
+.quote-icon-top {
+    top: 10px;
+    left: 15px;
+}
+
+.quote-icon-bottom {
+    bottom: 10px;
+    right: 15px;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+
+.quote blockquote {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Vision Section Styles */
+.vision,.mission {
+    padding: 80px 0;
+    background-color: #ffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-points::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/vision-text-bg.png');
+    background-size: contain;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+    pointer-events: none;
+    background-repeat: no-repeat;
+}
+
+.vision .container {
+    position: relative;
+    z-index: 2;
+}
+
+.vision-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.vision-image {
+    flex: 1;
+}
+
+.vision-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.vision-points {
+    flex: 1;
+    position: relative;
+    z-index: 2; 
+}
+
+.vision-point {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    max-width: 90%;
+    
+}
+
+.point-indicator {
+    min-width: 5px;
+    min-height: 30px;
+    background-color: #ff5722;
+    margin-right: 15px;
+}
+
+.vision-point p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FF725E;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Mission Section Styles */
+.mission {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-points::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/mission-text-bg.png');
+    background-size: contain;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+    pointer-events: none;
+    background-repeat: no-repeat;
+}
+
+.mission .container {
+    position: relative;
+    z-index: 2;
+}
+
+.mission-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.mission-points {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.mission-image {
+    flex: 1;
+}
+
+.mission-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.mission-point {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    max-width: 90%;
+}
+
+.mission-point .point-indicator {
+    background-color: #4CAF50;
+    min-width: 5px;
+    min-height: 30px;
+    margin-right: 15px;
+}
+
+.mission-point p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #18BC46;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Achievements Section Styles */
+/* .achievements {
+    padding: 80px 0;
+    height: 100vh;
+    background-image: url('../images/achievment-section.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+   
+}
+
+
+
+.achievements .container {
+    position: relative;
+    z-index: 2;
+}
+
+.achievements-timeline {
+    overflow-x: auto;
+    padding-bottom: 30px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+/* } */
+
+/* .timeline-wrapper {
+    display: flex;
+    min-width: 900px;
+    position: relative;
+}
+
+.timeline-wrapper::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 85%;
+    width: 100%;
+    z-index: 1;
+}
+
+.timeline-item {
+    flex: 1;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content {
+    background-color: rgba(3, 169, 244, 0.1);
+    border: 1px solid #03A9F4;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.timeline-year-box {
+    background-color: #03A9F4;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.timeline-year-box .year {
+    font-weight: bold;
+    font-size: 16px;
+}  */
+
+
+
+.image-container1 {
+  position: relative;
+  display: inline-block; /* so container fits image size */
+  max-width: 100%;
+  width: 100%;
+}
+
+.full-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background-color: #f0f0f0; /* or any color */
+  pointer-events: none;
+}
+
+
+
+.overlay-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  pointer-events: none;
+  white-space: nowrap;
+
+  /* Gradient text styles */
+  background: linear-gradient(to bottom, #60EFFF, #407BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  /* Optional: shadow for readability */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Contact and Query Section Styles */
+.contact-query {
+    padding: 80px 0;
+    background-image: url('../images/connect-us.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+
+
+.contact-query .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-section, .query-section {
+    padding: 20px 0;
+}
+
+.contact-section .section-title,
+.query-section .section-title {
+     background: linear-gradient(to bottom, #60EFFF, #407BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.contact-content {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #03A9F4;
+}
+
+.contact-map {
+    flex: 1;
+}
+
+.contact-map img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.query-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.query-form {
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.query-form input,
+.query-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+
+.query-form textarea {
+    height: 120px;
+    resize: vertical;
+    margin-bottom: 20px;
+}
+
+.query-form input::placeholder,
+.query-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.send-btn {
+    background-color: #03A9F4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+    background-color: #0288D1;
+}
+
+/* Footer Styles */
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+    .vision-content,
+    .mission-content,
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .vision-image,
+    .mission-image {
+        margin-bottom: 30px;
+    }
+    
+    .hero h1 {
+        font-size: 60px;
+    }
+    
+    .hero h2 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+  
+    
+   
+    .hero h1 {
+        font-size: 48px;
+    }
+    
+    .hero h2 {
+        font-size: 28px;
+    }
+    
+    .contact-section .section-title,
+    .query-section .section-title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section-title {
+        font-size: 24px;
+    }
+    
+   
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero h2 {
+        font-size: 24px;
+    }
+    
+    .quote blockquote {
+        font-size: 16px;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-item i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 20px; /* Adjust the curve size here */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Optional shadow */
+}
+
+@media (max-width: 768px) {
+  .overlay-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-text {
+    font-size: 1.2rem;
+  }
+}
+
+
+#form-alert {
+  margin-top: 15px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  display: none; /* Hidden by default */
+}
+
+#form-alert.success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+#form-alert.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
