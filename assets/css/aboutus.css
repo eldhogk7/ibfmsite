@@ -45,6 +45,16 @@ body {
   /* Contains the animations without breaking them */
   overflow-x: hidden;
 }
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* optional: for horizontal nav */
+  }
+  
+  .nav-item {
+    list-style: none; /* just in case */
+  }
 
 .container {
     width: 100%;
