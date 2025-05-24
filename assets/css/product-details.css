@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,6 +16,36 @@ body {
     overflow-x: hidden;
     background-color: #333;
 }
+body {
+    overflow-x: clip; /* Modern alternative to hidden */
+    max-width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  /* AOS specific fixes without breaking animations */
+  [data-aos], [data-aos-delay], [data-aos-easing], [data-aos-duration] {
+    max-width: 100%;
+    /* Removed the transform: none !important that was breaking animations */
+  }
+  
+  /* Make sure AOS containers don't add horizontal overflow */
+  .aos-init, .aos-animate {
+    max-width: 100%;
+  }
+  
+  /* Target AOS wrapper if it exists */
+  [data-aos-container], .aos-initialized {
+    max-width: 100%;
+  }
+  
+  /* Optional but recommended - prevent AOS animations from causing overflow */
+  .aos-animate {
+    /* Contains the animations without breaking them */
+    overflow-x: hidden;
+  }
 
 .container1 {
     max-width: 1200px;
@@ -341,92 +375,6 @@ body {
     opacity: 0.8;
     text-align: left;
 }
-
-/* Cloud System Section */
-/* .cloud-system {
-    padding: 5rem 0;
-    background: #f8f9fa;
-}
-
-.cloud-system h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #4A90E2;
-    margin-bottom: 1rem;
-}
-
-.cloud-system p {
-    text-align: center;
-    color: #666;
-    margin-bottom: 3rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cloud-features {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: center;
-    min-height: 400px;
-}
-
-.cloud-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.cloud-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-.cloud-item img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-}
-
-.cloud-item span {
-    display: block;
-    font-weight: 500;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-.cloud-item small {
-    color: #666;
-    font-size: 0.8rem;
-}
-
-.cloud-center {
-    grid-column: 2;
-    text-align: center;
-}
-
-.cloud-image {
-    width: 200px !important;
-    height: 150px !important;
-    border-radius: 25px !important;
-}
-
-.cloud-item.bottom-left {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.cloud-item.bottom-right {
-    grid-column: 3;
-    grid-row: 2; */
-
-/* } */
 
 
 
