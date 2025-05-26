@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 h1{
-    font-family: fantasy;
+    font-weight: bolder !important;
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -109,7 +109,7 @@ body {
     right: 0;
     height: 60%;
     background: linear-gradient(to top, 
-        rgba(255, 0, 150, 0.2) 0%,
+        rgba(0, 51, 255, 0.2) 0%,
         rgba(255, 100, 0, 0.2) 30%,
         rgba(255, 255, 0, 0.1) 60%,
         transparent 100%);

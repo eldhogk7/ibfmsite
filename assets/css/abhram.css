@@ -495,7 +495,7 @@ svg {
 }
 
 .section-text {
-  flex: 0 0 45%;
+  flex: 0 0 40%;
   color: black;
 }
 
@@ -573,7 +573,6 @@ svg {
   .section-text,
   .section-image {
     flex: 100%;
-    text-align: center;
   }
 
   .phone-img {
@@ -616,8 +615,7 @@ svg {
 
 .report-icon {
     position: absolute;
-    right: -60px;
-    top: 10%;
+    top: -12%;
     width: 100px;
     height: 100px;;
     transform: translateY(-50%);
@@ -636,8 +634,7 @@ svg {
 
 @media (max-width: 1276px) {
     .report-icon {
-        right: -30px;
-        top: 10%;
+        
         width: 80px;
         height: 80px;
     }
@@ -799,7 +796,7 @@ svg {
 
         /* Hero Section */
         .abhram_hero {
-            height: 80vh;
+            height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -834,7 +831,7 @@ svg {
         }
 
         .abhram_hero_subtitle {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             margin-bottom: 50px;
             color: #ccc;
         }
@@ -1144,7 +1141,7 @@ svg {
   }
 
   .abhram_app_card {
-    width: 200px;
+    width: 300px;
     
     text-align: center;
   }

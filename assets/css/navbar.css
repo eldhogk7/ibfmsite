@@ -32,9 +32,20 @@
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* optional: centers logo inside */
+  width: 50px;             /* make sure width == height */
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
 }
+.make-in-india-logo {
+  width: 100px;
+  margin-top: 15px;
+  background-color: transparent;
+}
+
 
 .logo img {
     height: 50px;

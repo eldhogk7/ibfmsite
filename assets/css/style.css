@@ -73,8 +73,13 @@ ul {
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* optional: centers logo inside */
+  width: 50px;             /* make sure width == height */
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .logo img {
@@ -298,7 +303,7 @@ ul {
 
 .badge-top {
     top: 10%;
-    left: 48%; /* Moved to top left as requested */
+    left: 50%; /* Moved to top left as requested */
     border-radius: 10px; /* Adjust the border radius for left side placement */
 }
 
@@ -1924,6 +1929,12 @@ img {
 .footer-logo {
   width: 130px;
   margin-bottom: 15px;
+}
+
+.make-in-india-logo {
+  width: 100px;
+  margin-top: 15px;
+  background-color: transparent;
 }
 
 .footer-socials {
