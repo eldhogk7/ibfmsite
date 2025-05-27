@@ -100,7 +100,7 @@ body {
 
 /* Hero Section Styles */
 .hero {
-    background-image: url('../images/about-us-header.jpg');
+    background-image: url('../images/about-us-header.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -462,7 +462,7 @@ blockquote {
 /* Contact and Query Section Styles */
 .contact-query {
     padding: 80px 0;
-    background-image: url('../images/connect-us.jpg');
+    background-image: url('../images/connect-us.webp');
     background-size: cover;
     background-position: center;
     position: relative;
