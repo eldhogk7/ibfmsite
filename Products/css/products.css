@@ -120,6 +120,7 @@ body {
     flex: 1;
     z-index: 2;
     position: relative;
+    text-align: left;
 }
 
 .product-content h2 {
@@ -127,6 +128,7 @@ body {
     font-weight: 400;
     margin-bottom: 30px;
     color: white;
+    text-align: left;
 }
 
 .features-list {
@@ -312,7 +314,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 930px) {
   
 
     .hero h1 {
@@ -325,7 +327,10 @@ body {
 
     .product-card {
         flex-direction: column;
-        text-align: center;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        flex-wrap: wrap;
         padding: 30px 20px;
     }
 
@@ -379,6 +384,66 @@ body {
 
     .reviews-title {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .product-card {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-content {
+        width: 100%;
+        order: 1;
+    }
+
+    .product-image {
+        width: 100%;
+        order: 2;
+        margin-top: 15px;
+    }
+
+    .features-list {
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    .features-list li {
+        width: 100%;
+        display: block;
+    }
+
+    .arrow-button {
+        order: 3;
+        margin-top: 15px;
+    }
+
+    .product-content h2 {
+        font-size: 1.5rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
+    .features-list li {
+        font-size: 0.9rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        padding-right: 5px;
+    }
+
+    .device-text {
+        font-size: 0.8rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
+    .product-image {
+        height: 150px;
     }
 }
 

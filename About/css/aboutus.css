@@ -147,7 +147,7 @@ body {
 
 .quote {
     position: relative;
-    border: 2px dotted #407BFF;
+    border: 2px dashed #407BFF;
     padding: 2rem;
     border-radius: 10px;
     background-color: transparent;

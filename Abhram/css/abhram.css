@@ -1029,17 +1029,17 @@ svg {
   gap: 60px;
   padding-top: 50px;
   padding-left: 120px;
-    padding-right: 120px;
-    padding-bottom: 40px;
-    background-color: #FFFFFF;
+  padding-right: 120px;
+  padding-bottom: 40px;
+  background-color: #FFFFFF;
 }
-.abhram_applcqtiona_header{
+.abhram_applcqtiona_header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #FFFFFF;
-    
+    padding-bottom: 20px;
 }
 .abhram_applcqtiona_header h2 {
     font-size: 2.5rem;
@@ -1113,46 +1113,100 @@ svg {
   color: #9c27b0;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-   
-    
-    .abhram_applcqtiona_header h2 {
-    font-size: 1.5rem;
-    
-   
-}
-    .abhram_applications_flex{
-        flex-direction: row;
-        overflow: auto !important;
-        scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: #888 #f1f1f1; /* For Firefox */
-    padding-left: 20px;
-    padding-right: 20px;
-
-    } 
-  .abhram_app_item {
-    flex-direction: column !important;
+/* Swipe Indicator Container */
+.swipe-indicator-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-  }
+    margin-top: 15px;
+}
 
-  .abhram_app_sideimg {
-    width: 150px;
-  }
+/* Swipe Indicator Styles */
+.swipe-indicator {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    gap: 10px;
+    animation: fadeInOut 2s ease-in-out infinite;
+}
 
-  .abhram_app_card {
-    width: 300px;
+.swipe-text {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.swipe-arrow {
+    animation: slideRight 1.5s ease-in-out infinite;
+    color: #2E6EFF;
+}
+
+@keyframes slideRight {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .swipe-indicator {
+        display: flex; /* Show only on mobile */
+    }
     
-    text-align: center;
-  }
+    .abhram_applications_flex {
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f1f1f1;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 30px;
+        position: relative;
+    }
 
-  .abhram_app_card h3 {
-    font-size: 1.3rem;
-  }
+    .abhram_applications_flex::-webkit-scrollbar {
+        height: 6px;
+    }
 
-  .abhram_app_card p {
-    font-size: 0.9rem;
-  }
+    .abhram_applications_flex::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .abhram_applications_flex::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+
+    .abhram_applications_flex::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .abhram_app_item {
+        flex: 0 0 auto;
+        width: 300px;
+        margin-right: 20px;
+    }
 }
 
 

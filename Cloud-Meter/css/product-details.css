@@ -119,9 +119,8 @@ body {
 
 .hero h1 {
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: bold;
     margin-bottom: 2rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     background: linear-gradient(to bottom, #60EFFF, #407BFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -462,6 +461,11 @@ body {
     z-index: 1;
     order: 2;
     margin: 1rem 0;
+}
+@media (max-width: 768px) {
+    .cloud-center {
+        display: none !important;
+    }
 }
 
 .cloud-image {

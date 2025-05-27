@@ -515,14 +515,16 @@ ul {
     }
     
     .badge-middle {
-        top: 85%;
+        top: 90%;
+        width: 100%;
         left: 60%;
         transform: translateX(-50%);
     }
     
        .badge-bottom {
         top: auto;
-        bottom: 280px;
+       
+        bottom: 320px;
         right: auto;
         left: 30%;
         transform: translateX(-50%);
