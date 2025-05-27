@@ -35,10 +35,10 @@
   display: flex;
   align-items: center;
   justify-content: center;  /* optional: centers logo inside */
-  width: 50px;             /* make sure width == height */
-  height: 50px;
+  width: 70px;             /* make sure width == height */
+  height: 40px;
   background-color: white;
-  border-radius: 50%;
+  border-radius: 15px;
 }
 .make-in-india-logo {
   width: 100px;
@@ -48,11 +48,13 @@
 
 
 .logo img {
-    height: 50px;
-    width: auto;
-    border-radius: 50%;
-    transition: var(--transition);
+  height: 60px;
+  width: auto;
+  margin-top: 8px;
+  border-radius: 50%;
+  transition: var(--transition);
 }
+
 
 /* Navigation styles */
 .main-nav {
@@ -162,13 +164,13 @@
     }
     
     .logo img {
-        height: 40px;
+        height: 50px;
     }
     
 }
 @media (max-width: 480px) {
     .logo img {
-        height: 35px;
+        height: 50px;
     }
     
     .site-header .container {
@@ -235,9 +237,12 @@
 }
 
 .footer-logo {
-  width: 130px;
+  width: 70px;
   margin-bottom: 15px;
+  background-color: white;
+  border-radius: 15px;
 }
+
 
 .footer-socials {
   margin-top: 10px;

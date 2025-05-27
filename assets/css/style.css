@@ -76,15 +76,16 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;  /* optional: centers logo inside */
-  width: 50px;             /* make sure width == height */
-  height: 50px;
+  width: 70px;             /* make sure width == height */
+  height: 40px;
   background-color: white;
-  border-radius: 50%;
+  border-radius: 15px;
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
     width: auto;
+    margin-top: 8px;
     border-radius: 50%;
     transition: var(--transition);
 }
@@ -1405,7 +1406,7 @@ ul {
 }
 
 .contributors-logos img {
-  max-height: 40px;
+  max-height: 43px;
   width: auto;
   object-fit: contain;
 }
@@ -1945,8 +1946,10 @@ img {
 }
 
 .footer-logo {
-  width: 130px;
+  width: 70px;
   margin-bottom: 15px;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .make-in-india-logo {
@@ -1984,5 +1987,14 @@ img {
 
   .footer-socials {
     justify-content: flex-start;
+  }
+}
+.premix-logo{
+  margin-top: -60px;
+}
+
+@media (max-width: 360px) {
+  .premix-logo{
+margin-top: -20px;
   }
 }

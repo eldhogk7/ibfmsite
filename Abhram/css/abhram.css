@@ -728,9 +728,7 @@ svg {
 
 @media (max-width: 576px) {
    
-    .logo {
-        margin-bottom: 15px;
-    }
+  
     
     nav ul {
         justify-content: center;
