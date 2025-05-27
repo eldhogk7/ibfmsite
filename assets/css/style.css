@@ -1669,7 +1669,7 @@ img {
 
 .ibfm-intro-heading {
   color: #0078d4;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -1702,17 +1702,74 @@ img {
   text-align: center;
 }
 
-.ibfm-card-image {
-  background-color: #ddd;
+.ibfm-card-image-1, .ibfm-card-image-2, .ibfm-card-image-3 {
   height: 120px;
   margin-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.ibfm-card-image-1:hover, 
+.ibfm-card-image-2:hover, 
+.ibfm-card-image-3:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.ibfm-card-image-1::after,
+.ibfm-card-image-2::after,
+.ibfm-card-image-3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ibfm-card-image-1:hover::after,
+.ibfm-card-image-2:hover::after,
+.ibfm-card-image-3:hover::after {
+  opacity: 1;
+}
+
+.ibfm-card-image-1 {
+  background-image: url('../images/hardware-chip.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+.ibfm-card-image-2 {
+  background-image: url('../images//hardware-privacy.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+.ibfm-card-image-3 {
+  background-image: url('../images/micro-codex.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
 }
 
 .ibfm-card-name {
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Connection Dots */
+.ibfm-solution-card:hover .ibfm-card-name {
+  color: #007bff;
+}
 
 /* Why Choose IBFM Section */
 .ibfm-why-section {
