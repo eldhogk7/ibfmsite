@@ -1093,7 +1093,7 @@ svg {
 .abhram_app_sideimg {
   width: 180px;
   max-width: 100%;
-  height: auto;
+  height: 180px;
 }
 
 .abhram_app_card.abhram_home h3,
