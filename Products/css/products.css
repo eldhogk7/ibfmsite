@@ -176,14 +176,14 @@ body {
     overflow: hidden;
 }
 .image1, .image3{
-    background: url('../images/product1.jpg');
+    background: url('https://ik.imagekit.io/praz3pxhv/Products/product1.jpg?updatedAt=1748349093050');
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
 
 }
 .image2{
-    background: url('../images/product-2.jpg');
+    background: url('https://ik.imagekit.io/praz3pxhv/Products/product-2.jpg?updatedAt=1748349092937');
     background-attachment: scroll;
     background-size: cover;
     background-position: center;

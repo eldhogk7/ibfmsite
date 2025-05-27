@@ -596,18 +596,6 @@ ul {
   background-blend-mode: normal, normal, screen;
 }
 
-.cloud-top-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 120px; /* adjust size as needed */
-  height: 120px;
-  background: url('../images/cloud.png') no-repeat center;
-  background-size: contain;
-  z-index: 1;
-  opacity: 0.5; /* make it subtle */
-  pointer-events: none;
-}
 
 
 /* Container */
@@ -680,13 +668,6 @@ ul {
     right: 35%;
     color: rgb(249, 247, 247);
     top:70%
-}
-.iot-wifi-icon {
-  width: 100px; /* or keep 150px if needed */
-  height: 80px;
-  background: url('../images/wifi.png') no-repeat center;
-  background-size: contain;
-  margin-bottom: -10px; /* pulls it closer to the text */
 }
 
 
@@ -884,29 +865,7 @@ ul {
 }
 
 
-.hexagon-bg {
-    position: absolute;
-    width: 272px;
-    height: 272px;
-    right: 70%;
-    background-image: url('/assets/images/hexagon.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    opacity: 0.1;
-}
-.hexagon-bg2 {
-    position: absolute;
-    width: 272px;
-    height: 272px;
-    right: 90%;
-    top: 90%;
-    background-image: url('/assets/images/hexagon.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    opacity: 0.1;
-}
+
 
 .device-illustration {
     position: absolute;
@@ -1653,7 +1612,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/introcution-bg.webp');
+  background-image: url('https://ik.imagekit.io/praz3pxhv/images/introcution-bg.webp?updatedAt=1748346519796');
   background-size: cover;
   background-position: center;
   
@@ -1741,7 +1700,7 @@ img {
 }
 
 .ibfm-card-image-1 {
-  background-image: url('../images/hardware-chip.jpg');
+  background-image: url('https://ik.imagekit.io/praz3pxhv/images/hardware-chip.jpg?updatedAt=1748346519187');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1749,7 +1708,7 @@ img {
 }
 
 .ibfm-card-image-2 {
-  background-image: url('../images/hardware-privacy.jpg');
+  background-image: url('https://ik.imagekit.io/praz3pxhv/images/hardware-privacy.jpg?updatedAt=1748346519131');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1757,7 +1716,7 @@ img {
 }
 
 .ibfm-card-image-3 {
-  background-image: url('../images/micro-codex.jpg');
+  background-image: url('https://ik.imagekit.io/praz3pxhv/images/micro-codex.jpg?updatedAt=1748346519416');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1787,7 +1746,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/4k-dots.jpg');
+  background-image: url('https://ik.imagekit.io/praz3pxhv/images/4k-dots.jpg?updatedAt=1748346514971');
   background-size: cover;
   background-attachment: scroll;
   opacity: 0.4;

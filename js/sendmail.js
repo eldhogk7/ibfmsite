@@ -21,55 +21,38 @@ function submitForm() {
             subject: subject_id,
             message: message
         };
-        console.log(payload)
-        setTimeout(() => {
-      // Simulate a successful response
-      const success = false; // or false to test error
-
-      if (success) {
-        showAlert("Your message has been sent successfully!", "success");
-        document.getElementById("mail_form").reset();
-      } else {
-        showAlert("Something went wrong. Please try again later.", "error");
-      }
-
-      // Re-enable button
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Send";
-
-    }, 1500);
         
-
         // Create an XMLHTTPRequest object
-        // var xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
 
-        // // Define the request method and URL
-        // xhr.open('POST', 'https://benevolent-brigadeiros-fb8761.netlify.app/.netlify/functions/sendMail', true); // Update the URL to your function
+        // Define the request method and URL
+        xhr.open('POST', 'https://benevolent-brigadeiros-fb8761.netlify.app/.netlify/functions/sendMail', true); // Update the URL to your function
 
-        // // Set the request header
-        // xhr.setRequestHeader('Content-Type', 'application/json');
+        // Set the request header
+        xhr.setRequestHeader('Content-Type', 'application/json');
 
-        // // Set up the callback function to handle the response
-        // xhr.onreadystatechange = function () {
-        //     if (xhr.readyState === 4) {
-        //         if (xhr.status === 200) {
-        //             // Handle the successful response
-        //             console.log(xhr.responseText);
-        //             document.querySelector(".u-btn-submit").style.display = "none";
-        //             document.getElementById("suc_msg").style.display = "block";
-        //             document.getElementById("mail_form").reset(); // Change this to reset()
-        //         } else {
-        //             // Handle error
-        //             console.error('Error: ' + xhr.status);
-        //             document.querySelector(".u-btn-submit").style.display = "none";
-        //             document.getElementById("err_msg").style.display = "block";
-        //             document.getElementById("mail_form").reset(); // Change this to reset()
-        //         }
-        //     }
-        // };
+        // Set up the callback function to handle the response
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    // Handle the successful response
+                    showAlert("Your message has been sent successfully!", "success");
+                    document.getElementById("mail_form").reset();
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Send";
+            
+                    } else {
+                    // Handle error
+                    showAlert("Something went wrong. Please try again later.", "error");
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Send";
+                  }
+            }
+        };
 
-        // // Send the POST request with the JSON payload
-        // xhr.send(JSON.stringify(payload));
+        // Send the POST request with the JSON payload
+        xhr.send(JSON.stringify(payload));
+  
         
     }
     else{
