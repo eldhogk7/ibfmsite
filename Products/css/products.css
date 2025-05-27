@@ -166,7 +166,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -177,14 +177,14 @@ body {
 }
 .image1, .image3{
     background: url('../images/product1.jpg');
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
 
 }
 .image2{
     background: url('../images/product-2.jpg');
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
 
