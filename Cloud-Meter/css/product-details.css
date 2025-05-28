@@ -89,19 +89,29 @@ body {
     overflow: hidden;
 }
 
-.hero::before {
+.hero::before,
+.hero::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/tempreature-analyser.webp?updatedAt=1748349623082');
-    background-attachment: scroll;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-size: cover;
-    
-    opacity: 0.3;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
 }
+
+.hero::before {
+    background-image: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/temp-hero1.webp?updatedAt=1748446535510');
+    opacity: 0.3; /* More visible */
+}
+
+.hero::after {
+    background-image: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/temphero-2.jpg?updatedAt=1748446462303');
+    opacity: 0.3; /* Less visible */
+    mix-blend-mode: overlay; /* Optional, or try multiply/soft-light */
+}
+
 
 .hero-content {
     position: relative;

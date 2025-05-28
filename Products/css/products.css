@@ -183,7 +183,7 @@ body {
 
 }
 .image2{
-    background: url('https://ik.imagekit.io/praz3pxhv/Products/product-2.jpg?updatedAt=1748349092937');
+    background: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/temp-hero1.webp?updatedAt=1748446535510');
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
@@ -207,13 +207,19 @@ body {
 }
 
 .device-text {
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 0.9rem;
     z-index: 3;
     position: relative;
     text-align: center;
+    
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    padding: 0.3rem 0.6rem;              /* some padding for readability */
+    border-radius: 4px;                  /* optional: rounded corners */
+    display: inline-block;               /* ensures background wraps the text */
 }
+
 
 /* IoT Hub Card */
 
