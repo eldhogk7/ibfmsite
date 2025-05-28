@@ -1370,7 +1370,7 @@ ul {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: clamp(32px, 10vw, 120px) !important; /* min 32px, scales with viewport, max 150px */
+  font-size: clamp(42px, 10vw, 120px) !important; /* min 32px, scales with viewport, max 150px */
   color: #595959;
   font-weight: 800;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -1990,11 +1990,17 @@ img {
   }
 }
 .premix-logo{
-  margin-top: -60px;
+  margin-top: -52px;
 }
 
 @media (max-width: 360px) {
   .premix-logo{
 margin-top: -20px;
   }
+}
+
+@media only screen and (max-width: 600px) {
+ .icon-wrapper{
+  max-width: 150px;
+ }
 }
