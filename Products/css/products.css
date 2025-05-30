@@ -175,20 +175,37 @@ body {
     position: relative;
     overflow: hidden;
 }
-.image1, .image3{
-    background: url('https://ik.imagekit.io/praz3pxhv/Products/product1.jpg?updatedAt=1748349093050');
+.image1, .image2,.image3,.image4{
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+
+}
+.image1{
+    background: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/cloud-header.webp?updatedAt=1748598029298');
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
 
 }
 .image2{
-    background: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/temp-hero1.webp?updatedAt=1748446535510');
+    background: url('https://ik.imagekit.io/praz3pxhv/Temperature-analyzer/temp-hero1.webp?updatedAt=1748597984842');
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
 
 }
+.image3{
+    background-image: url('https://ik.imagekit.io/praz3pxhv/Cloud-Dispaly/Cloud-Display-header-1.jpg?updatedAt=1748604436979');
+    background-attachment: scroll;
+    background-size: cover;
+}
+.image4{
+    background: url('https://ik.imagekit.io/praz3pxhv/Custom-IOT/custom-iot.webp?updatedAt=1748604786989');
+    background-attachment: scroll;
+    background-size: cover;
+}
+
 
 .thermal-overlay {
     position: absolute;

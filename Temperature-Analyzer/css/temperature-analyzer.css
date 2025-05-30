@@ -89,30 +89,34 @@ body {
     overflow: hidden;
 }
 
-.hero::before {
+.hero::before,
+.hero::after {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/cloud-header.webp?updatedAt=1748598029298');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.3;
 }
 
+.hero::before {
+    background-image: url('https://ik.imagekit.io/praz3pxhv/Temperature-analyzer/temp-hero1.webp?updatedAt=1748597984842');
+    opacity: 0.3; /* More visible */
+}
 
+.hero::after {
+    background-image: url('https://ik.imagekit.io/praz3pxhv/Temperature-analyzer/temphero-2.jpg?updatedAt=1748597932491');
+    opacity: 0.3; /* Less visible */
+    mix-blend-mode: overlay; /* Optional, or try multiply/soft-light */
+}
 @media (max-width: 768px) {
     .hero {
         min-height: 50vh; /* or adjust to 60vh, or a fixed px value like 400px */
     }
 
-    .hero::before {
-        background-image: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/cloud-header-phone.webp?updatedAt=1748598028965'); 
-
-        background-size: cover; /* ensures the image scales without cropping */
-    }
+   
 }
 
 .hero-content {

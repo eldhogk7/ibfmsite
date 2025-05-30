@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Meter - IoT Temperature Analyzer | IBFM</title>
+    <title>Cloud Display - IoT Cloud Display| IBFM</title>
     <meta name="description" content="Industrial-grade IoT temperature analyzer with high accuracy, wide connectivity options including 4G, WiFi, LoRa, and ZigBee. Made in India by Abhram Technologies.">
     <meta name="keywords" content="temperature analyzer, IoT device, cloud meter, industrial IoT, temperature monitoring, 4G connectivity, WiFi sensor, LoRa device, ZigBee, Made in India, Abhram Technologies">
     <meta name="author" content="Abhram Technologies">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Cloud Meter - IoT Temperature Analyzer | IBFM">
+    <meta property="og:title" content="Cloud Display - IoT Cloud Display | IBFM">
     <meta property="og:description" content="Industrial-grade IoT temperature analyzer with high accuracy, wide connectivity options including 4G, WiFi, LoRa, and ZigBee.">
     <meta property="og:image" content="https://ik.imagekit.io/praz3pxhv/images/title-logo.png?updatedAt=1748358939434">
-    <meta property="og:url" content="https://ibfm.in/Cloud-Meter">
-    <link rel="canonical" href="https://ibfm.in/Cloud-Meter">
-    <link rel="stylesheet" href="./css/product-details.css">
+    <meta property="og:url" content="https://ibfm.in/Cloud-Display">
+    <link rel="canonical" href="https://ibfm.in/Cloud-Display">
+    <link rel="stylesheet" href="./css/Cloud-dsipaly.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
     <link rel="icon" href="https://ik.imagekit.io/praz3pxhv/images/title-logo.png?updatedAt=1748358939434" type="image/x-icon">
     <!-- Font Awesome for icons -->
@@ -25,7 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
 
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /></head>
 <body>
@@ -54,17 +54,28 @@
     </header>
     <!-- Hero Section -->
     <section class="hero" aria-label="Product introduction">
+        <!-- Modern Swiper Slider -->
+        <div class="hero-swiper">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+                <!-- Clean pagination dots -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!-- Your existing hero content (unchanged) -->
         <div class="hero-content">
             <div class="hero-text">
-               
-                <h1 data-aos="fade-up">Cloud Meter</h1>
+                <h1 data-aos="fade-up">Cloud Display</h1>
                 
                 <div class="feature-tags" data-aos="fade-up">
                     <span class="tag">Wide temperature range</span>
-                    <span class="tag accuracy">0.5 c Accuracy</span>
+                    <span class="tag accuracy">0.5°C Accuracy</span>
                 </div>
-                
-              
                 
                 <div class="feature-tags-bottom" data-aos="fade-up">
                     <span class="tag">High speed transferring</span>
@@ -239,8 +250,71 @@
     <script>
     AOS.init();
     </script>
-    
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Initialize Swiper
+            const swiper = new Swiper('.hero-swiper .swiper', {
+                // Basic settings
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                
+                // Smooth transitions
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                
+                // Speed and easing
+                speed: 800,
+                
+                // Pagination
+                pagination: {
+                    el: '.hero-swiper .swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: false,
+                },
+                
+                // Keyboard control
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: true,
+                },
+                
+                // Touch settings
+                touchRatio: 1,
+                threshold: 10,
+                
+                // Accessibility
+                a11y: {
+                    enabled: true,
+                },
+                
+                // Debug and events
+                on: {
+                    init: function() {
+                        
+                        // Pause autoplay on hover
+                        const heroSection = document.querySelector('.hero');
+                        heroSection.addEventListener('mouseenter', () => {
+                            this.autoplay.stop();
+                        });
+                        heroSection.addEventListener('mouseleave', () => {
+                            this.autoplay.start();
+                        });
+                    },
+                    slideChange: function() {
+                        console.log('Slide changed to:', this.activeIndex);
+                    }
+                }
+            });
+        });
+    </script>
     <script>
         // Mobile Navigation Toggle
         window.addEventListener('scroll', function() {

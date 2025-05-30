@@ -93,7 +93,7 @@ body {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/cloud-header.webp?updatedAt=1748598029298');
+    background-image: url('https://ik.imagekit.io/praz3pxhv/Custom-IOT/custom-iot.webp?updatedAt=1748604786989');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -108,11 +108,7 @@ body {
         min-height: 50vh; /* or adjust to 60vh, or a fixed px value like 400px */
     }
 
-    .hero::before {
-        background-image: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/cloud-header-phone.webp?updatedAt=1748598028965'); 
-
-        background-size: cover; /* ensures the image scales without cropping */
-    }
+ 
 }
 
 .hero-content {
