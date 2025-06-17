@@ -151,7 +151,7 @@ body {
 /* Mobile Images */
 @media (max-width: 767px) {
     .hero {
-        min-height: 50vh; /* or adjust to 60vh, or a fixed px value like 400px */
+        min-height: 60vh; /* or adjust to 60vh, or a fixed px value like 400px */
     }
     .hero-swiper .swiper-slide:nth-child(1) {
         background-image: url('https://ik.imagekit.io/praz3pxhv/Cloud-Dispaly/Cloud-Display-header-2-phone.jpg.webp?updatedAt=1748604436942');
