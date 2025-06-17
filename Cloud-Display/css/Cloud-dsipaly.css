@@ -216,7 +216,7 @@ body {
 
 .feature-tags, .feature-tags-bottom {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
     margin: 1.5rem 0;
     flex-wrap: wrap;
@@ -324,7 +324,7 @@ body {
 .feature-tags {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
 }
@@ -370,7 +370,7 @@ body {
 .feature-tags-bottom {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 
@@ -383,7 +383,11 @@ body {
 .connectivity h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #4A90E2;
+    background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     margin-bottom: 1rem;
 }
 
@@ -448,7 +452,11 @@ body {
 .features h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #4A90E2;
+    background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     margin-bottom: 1rem;
 }
 
@@ -588,7 +596,11 @@ body {
 .cloud-system h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #4A90E2;
+    background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     margin-bottom: 1rem;
 }
 

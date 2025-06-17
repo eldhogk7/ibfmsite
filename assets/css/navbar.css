@@ -215,6 +215,22 @@
   list-style: none;
   padding: 0;
 }
+.abhram-india-logo {
+  width: 100px;
+  margin-top: 30px;
+  height: 20px;
+  background-color: transparent;
+}
+.Powered-by {
+  position: relative;
+  top: -6px;
+}
+
+.footer-logos {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .footer-column ul li {
   margin: 8px 0;

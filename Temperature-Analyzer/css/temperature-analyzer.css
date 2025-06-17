@@ -147,7 +147,7 @@ body {
 .feature-tags {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
 }
@@ -193,7 +193,7 @@ body {
 .feature-tags-bottom {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 
@@ -206,7 +206,11 @@ body {
 .connectivity h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #4A90E2;
+    background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     margin-bottom: 1rem;
 }
 
@@ -221,9 +225,12 @@ body {
 
 .connectivity-options {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .connectivity-item {
@@ -241,17 +248,22 @@ body {
 }
 
 .connectivity-icon {
-    width: 80px;
-    height: 80px;
-    background: #333;
+    width: 70px;
+    height: 70px;
+    background: #f8f9fa;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
-    color: #003df9;
-    font-size: 1.5rem;
-    font-weight: bold;
+    margin: 0 auto;
+    color: #00d973;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+.connectivity-item:hover .connectivity-icon {
+    background: #00d973;
+    color: white;
+    transform: scale(1.1);
 }
 
 
@@ -271,8 +283,11 @@ body {
 .features h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #4A90E2;
-    margin-bottom: 1rem;
+    background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;    margin-bottom: 1rem;
 }
 
 .features p {
@@ -383,7 +398,7 @@ body {
 .hardware-item h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #4CAF50;
+    color: #18dd80;
 }
 
 .hardware-item p {
@@ -411,8 +426,11 @@ body {
 .cloud-system h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #4A90E2;
-    margin-bottom: 1rem;
+    background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;    margin-bottom: 1rem;
 }
 
 .cloud-system p {
@@ -480,6 +498,13 @@ body {
     margin: 1rem 0;
 }
 @media (max-width: 768px) {
+    @media (max-width: 1024px) {
+        .connectivity-options {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+    }
     .cloud-center {
         display: none !important;
     }

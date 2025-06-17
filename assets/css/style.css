@@ -1954,9 +1954,19 @@ img {
 
 .make-in-india-logo {
   width: 100px;
-  margin-top: 15px;
   background-color: transparent;
 }
+.abhram-india-logo {
+  width: 100px;
+  margin-top: 30px;
+  height: 20px;
+  background-color: transparent;
+}
+.Powered-by {
+  position: relative;
+  top: -6px;
+}
+
 
 .footer-socials {
   margin-top: 10px;
@@ -1971,6 +1981,10 @@ img {
 
 .footer-socials a:hover {
   color: #1da1f2;
+}
+.footer-logos {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ✅ Responsive: left-align on small screens */
