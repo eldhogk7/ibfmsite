@@ -561,6 +561,21 @@ svg {
 .arrow {
   color: #0080ff;
   margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+}
+
+.arrow i {
+  transition: transform 0.3s ease;
+}
+
+.alert-feature:hover .arrow i,
+.report-feature:hover .arrow i {
+  transform: scale(1.2);
 }
 
 /* Responsive fix */

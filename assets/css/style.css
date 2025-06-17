@@ -1930,9 +1930,9 @@ img {
   font-size: 0.95rem;
 }
 
-.footer-column ul li span {
-  margin-right: 8px;
-  color: #ccc;
+.footer-column ul li i {
+  margin-right: 10px;
+  font-size: 0.8em;
 }
 
 .footer-column a {

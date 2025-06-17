@@ -231,6 +231,10 @@
   flex-direction: column;
 }
 
+.footer-column ul li i {
+  margin-right: 10px;
+  font-size: 0.8em;
+}
 
 .footer-column ul li {
   margin: 8px 0;
