@@ -184,8 +184,13 @@ ul {
     width: 50%;
     position: relative;
     z-index: 2;
-    padding:20px;
+    padding: 20px;
+}
+@media (min-width: 768px) {
+  .hero-content{
     top:-50px;
+
+  }
 }
 .hero-content::before {
   content: "IOT";
@@ -406,7 +411,6 @@ ul {
     
     .hero-content {
         width: 100%;
-        margin-bottom: 2rem;
     }
     
     .hero-content h1 {
