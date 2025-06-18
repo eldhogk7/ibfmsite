@@ -100,7 +100,7 @@ body {
     background-repeat: no-repeat;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 
@@ -404,7 +404,6 @@ body {
     width: 100%;
     height: 100%;
     background: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/abhram-hardware-iot.webp?updatedAt=1748349622987') center center / cover no-repeat fixed;
-    opacity: 0.5;
     z-index: -1;
 }
 
@@ -430,9 +429,9 @@ body {
 .hardware-item {
     text-align: center;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(0 0 0 / 20%);
     backdrop-filter: blur(10px);
-    border-radius: 15px;
+        border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     overflow: hidden;
 }
@@ -515,7 +514,7 @@ body {
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 2;
+    z-index: 100;
     width: 100%;
     max-width: 300px;
 }
@@ -558,8 +557,8 @@ body {
 }
 
 .cloud-image {
-    width: 200px !important;
-    height: 150px !important;
+    width: 445px !important;
+    height: 350px !important;
     border-radius: 25px !important;
 }
 
@@ -665,9 +664,10 @@ body {
     }
 
     .cloud-image {
-        width: 250px !important;
-        height: 250px !important;
+        width: 445px !important;
+        height:350px !important;
         border-radius: 50% !important;
+        z-index: -1 !important;
     }
 
     /* Position particles around the orbit in static circular formation */

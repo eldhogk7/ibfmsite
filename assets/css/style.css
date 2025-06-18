@@ -208,7 +208,11 @@ ul {
 }
 
 .highlight {
-    color: var(--primary-color);
+  background: linear-gradient(to bottom, #60EFFF, #407BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
     font-size: 3.5rem;
     display: block;
     margin-top: 0.5rem;
@@ -264,9 +268,11 @@ ul {
 }
 
 .device-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
 }
 
 .soil-sensor {
@@ -294,8 +300,8 @@ ul {
     z-index: 4;
 }
 .badge p {
-  background: linear-gradient(90deg, #60EFFF, #2E6EFF);
-  -webkit-background-clip: text;
+  background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* For Firefox */
   color: transparent;
@@ -1081,8 +1087,11 @@ ul {
 }
 
 .header h1 {
-    color: #2196f3;
-    font-size: 36px;
+  background: linear-gradient(to bottom, #60EFFF, #407BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;    font-size: 36px;
     font-weight: 600;
 }
 
@@ -1101,14 +1110,15 @@ ul {
 }
 
 .card {
-    height: 300px;
-    border-radius: 15px;
-    overflow: hidden;
-    display: flex;
-     box-shadow: 27px 7px 13px 0px rgba(0,0,0,0.2);
-    position: relative;
-    transition: transform 0.3s ease;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 27px 7px 13px 0px rgba(0,0,0,0.2);
+  position: relative;
+  transition: transform 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-5px);
 }
@@ -1120,39 +1130,46 @@ ul {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1); /* default, will be overridden */
-  z-index: 1;
-  transition: transform 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.2); /* dark effect */
+  z-index: 5; /* above image AND content */
+  transition:
+    transform 0.5s ease,
+    background-color 0.5s ease;
   transform: scale(1);
+  pointer-events: none; /* so it doesn't block clicks */
 }
 
 .card:hover .hover-bg {
-  transform: scale(10);
-}
-.card-content {
-    padding: 30px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    order: 2;
+  transform: scale(10); /* cover full card */
+  background-color: rgba(0, 0, 0, 0); /* reveal brightness */
 }
 
+.card-content {
+  padding: 30px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  z-index: 4; /* above hover-bg */
+}
 
 .card-img {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    order: 1;
-    background-color: transparent !important;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  order: 1;
+  background-color: transparent !important;
+  z-index: 3;
 }
 
 .card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 /* Limit width of card */
 .col-50 {
   flex: 0 0 50%;
@@ -1617,7 +1634,7 @@ img {
   background-size: cover;
   background-position: center;
   
-  opacity: 0.3;
+  opacity: 0.8;
   z-index: 1;
 }
 
@@ -1625,8 +1642,8 @@ img {
   position: relative;
   z-index: 2;
   padding: 2rem;
-  background: linear-gradient(135deg, rgba(29, 27, 20, 0.7), rgba(29, 27, 20, 0.4));
-
+  background: rgb(0 0 0 / 20%);
+  backdrop-filter: blur(10px);
 }
 
 .ibfm-intro-heading {
@@ -1760,8 +1777,12 @@ img {
 }
 
 .ibfm-why-heading {
-  color: #0078d4;
-  font-size: 2.5rem;
+  background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
   position: relative;
@@ -1809,6 +1830,13 @@ img {
   font-size: 1.4rem;
   margin-bottom: 1rem;
   color: #fff;
+}
+.ibfm-feature-title:hover{
+  background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .ibfm-feature-desc {

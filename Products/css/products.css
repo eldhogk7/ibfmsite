@@ -42,8 +42,11 @@ body {
 .hero h1 {
     font-size: 3.5rem;
     font-weight: 300;
-    color: #00BFFF;
-    margin-bottom: 40px;
+    background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;    margin-bottom: 40px;
 }
 
 /* Product Cards Container */

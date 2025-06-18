@@ -122,56 +122,94 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    padding: 0 20px;
+    max-width: 1200px;
+    padding: 2rem;
+    background: transparent;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
-.hero-icon img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     background: linear-gradient(to bottom, #60EFFF, #407BFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    text-align: center;
 }
 
 .feature-tags {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-bottom: 2rem;
-    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
 }
 
 .tag {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 0.5rem 1rem;
+    background: rgb(0 0 0 / 20%);;
+    backdrop-filter: blur(5px);
+    padding: 1.2rem;
     border-radius: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
     transition: all 0.3s ease;
-    
-    width: 180px; /* Set to desired fixed width */
-    text-align: center; /* Center the text inside */
-    display: inline-block; /* Ensure proper inline styling */
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 .tag:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+    background:rgb(0 0 0 / 20%);;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.feature-tags-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
 
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .feature-tags,
+    .feature-tags-bottom {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .tag {
+        height: 70px;
+        font-size: 0.9rem;
+    }
+}
 
 .device-preview {
     margin: 3rem 0;
@@ -188,13 +226,6 @@ body {
 
 .device-preview img:hover {
     transform: scale(1.05);
-}
-
-.feature-tags-bottom {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
 }
 
 /* Connectivity Section */
@@ -236,42 +267,94 @@ body {
 .connectivity-item {
     text-align: center;
     padding: 2rem;
-    background: white;
+    background-size: cover;
+    background-position: center;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.connectivity-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.connectivity-icon {
-    width: 70px;
-    height: 70px;
-    background: #f8f9fa;
-    border-radius: 50%;
+    position: relative;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    color: #00d973;
-    font-size: 1.8rem;
-    transition: all 0.3s ease;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
 }
-.connectivity-item:hover .connectivity-icon {
-    background: #00d973;
+
+.connectivity-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.connectivity-item span {
+    position: relative;
+    z-index: 2;
     color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 1rem;
+    transition: all 0.4s ease;
+}
+
+.connectivity-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.connectivity-item:hover::before {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+}
+
+.connectivity-item:hover span {
+    transform: scale(1.05);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Add a subtle animation for the background image */
+.connectivity-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.connectivity-item:hover::after {
     transform: scale(1.1);
 }
 
+/* Remove the old icon styles since we're not using them anymore */
+.connectivity-icon {
+    display: none;
+}
 
+@media (max-width: 1024px) {
+    .connectivity-options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+}
 
-.connectivity-item span {
-    font-size: 0.9rem;
-    color: #666;
-    font-weight: 500;
+@media (max-width: 768px) {
+    .connectivity-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .connectivity-item {
+        height: 180px;
+    }
 }
 
 /* Features Section */
@@ -376,9 +459,9 @@ body {
 .hardware-item {
     text-align: center;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(0 0 0 / 20%);
     backdrop-filter: blur(10px);
-    border-radius: 15px;
+        border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     overflow: hidden;
 }
