@@ -848,10 +848,14 @@ body {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+    .cloud-center{
+        display: none !important;
+    }
     
-   .cloud-center{
-    display: none !important;
-   }
+    /* .cloud-center {
+        grid-column: 1;
+        order: -1;
+    }
     
     .cloud-item.bottom-left,
     .cloud-item.bottom-right {
