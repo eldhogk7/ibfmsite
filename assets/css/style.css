@@ -181,9 +181,11 @@ ul {
 }
 
 .hero-content {
-    width: 45%;
+    width: 50%;
     position: relative;
     z-index: 2;
+    padding:20px;
+    top:-50px;
 }
 .hero-content::before {
   content: "IOT";
@@ -301,21 +303,21 @@ ul {
 }
 .badge p {
   background: linear-gradient(to bottom, #60EFFF, #407BFF);
-    -webkit-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* For Firefox */
-  color: transparent;
+  background-clip: text;
+  color: transparent;  
  
 }
 
 .badge-top {
     top: 10%;
-    left: 50%; /* Moved to top left as requested */
+    left: 48%; /* Moved to top left as requested */
     border-radius: 10px; /* Adjust the border radius for left side placement */
 }
 
 .badge-middle {
-    top: 70%; /* Position below the first image */
+    top: 68%; /* Position below the first image */
     left: 20%;
     transform: translateX(-50%);
 }
