@@ -1265,7 +1265,6 @@ blockquote {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .contact-section {
-        padding: 40px 20px;
         min-height: auto;
     }
 
@@ -1301,9 +1300,7 @@ blockquote {
 }
 
 @media (max-width: 480px) {
-    .contact-section {
-        padding: 20px 15px;
-    }
+   
 
     .contact-info h1 {
         font-size: 28px;
