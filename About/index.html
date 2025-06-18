@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
+
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
@@ -216,7 +217,11 @@
 
     <!-- Contact and Query Section -->
     <section class="contact-query" aria-labelledby="contact-title">
+          
         <div class="container">
+            <div class="glow glow1"></div>
+            <div class="glow glow2"></div>
+    
             <div class="contact-section">
                 <h2 class="section-title" id="contact-title">Let's connect</h2>
                 <div class="contact-content" data-aos="fade-right">
@@ -271,6 +276,8 @@
 
     <!-- FAQ Section -->
     <section class="faq-section" data-aos="fade-up">
+        <div class="faq-glow faq-glow1"></div>
+        <div class="faq-glow faq-glow2"></div>
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div class="faq-accordion">
             <div class="faq-item">
@@ -308,6 +315,7 @@
                     <p>Yes, IoT dashboard is designed to seamlessly integrate with a variety of devices, including energy meters, water meters, temperature sensors, and more. This flexibility allows you to monitor and analyze diverse data sources on a single platform.</p>
                 </div>
             </div>
+            <a class="view-all-link" id="viewAllBtn">View All</a>
             <div class="faq-item">
                 <button class="faq-question">What advantages does IoT dashboard offer in terms of data visualization?</button>
                 <div class="faq-answer">
@@ -447,7 +455,7 @@
         <img src="https://ik.imagekit.io/praz3pxhv/images/ibfm-new-logo.png?updatedAt=1748346519584" alt="Abhram Logo" class="footer-logo" />
         <p>
           Industrial-Grade IoT <br> Made in India <br> <span class="Powered-by">Powered by </span>
-          <a href="https://www.abhram.com/"><img src="./assets/ABHRAM LOGO 1.png" alt="Abhram Technologies" class="abhram-india-logo" loading="lazy" /></a>
+          <a href="https://www.abhram.com/"><img src="../assets/ABHRAM LOGO 1.png" alt="Abhram Technologies" class="abhram-india-logo" loading="lazy" /></a>
         
         </p>
         <div class="footer-logos">
@@ -526,17 +534,68 @@ phoneInput.addEventListener('input', function () {
 
 // FAQ Accordion functionality
 const faqQuestions = document.querySelectorAll('.faq-question');
+const viewAllBtn = document.getElementById('viewAllBtn');
+const faqItems = document.querySelectorAll('.faq-item');
+let showingAll = false;
+
 faqQuestions.forEach(btn => {
   btn.addEventListener('click', function() {
     const item = this.parentElement;
     item.classList.toggle('active');
-    // Optionally close others:
+    
     faqQuestions.forEach(otherBtn => {
       if (otherBtn !== this) {
         otherBtn.parentElement.classList.remove('active');
       }
     });
   });
+});
+
+viewAllBtn.addEventListener('click', function() {
+  showingAll = !showingAll;
+  
+  // Remove any existing view-all-link elements
+  document.querySelectorAll('.view-all-link').forEach(link => link.remove());
+  
+  if (showingAll) {
+    // Show all items
+    faqItems.forEach((item, index) => {
+      if (index >= 4) {
+        item.classList.add('show');
+      }
+    });
+    
+    // Create and append new link at the bottom
+    const newLink = document.createElement('a');
+    newLink.className = 'view-all-link';
+    newLink.id = 'viewAllBtn';
+    newLink.textContent = 'Show Less';
+    document.querySelector('.faq-accordion').appendChild(newLink);
+    
+    // Add event listener to the new link
+    newLink.addEventListener('click', function() {
+      viewAllBtn.click();
+    });
+  } else {
+    // Hide items after the 4th
+    faqItems.forEach((item, index) => {
+      if (index >= 4) {
+        item.classList.remove('show');
+      }
+    });
+    
+    // Create and append new link after 4th item
+    const newLink = document.createElement('a');
+    newLink.className = 'view-all-link';
+    newLink.id = 'viewAllBtn';
+    newLink.textContent = 'View All';
+    faqItems[3].insertAdjacentElement('afterend', newLink);
+    
+    // Add event listener to the new link
+    newLink.addEventListener('click', function() {
+      viewAllBtn.click();
+    });
+  }
 });
 
         </script>

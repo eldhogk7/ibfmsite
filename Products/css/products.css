@@ -300,26 +300,68 @@ body {
     padding: 30px;
     border-radius: 20px;
     display: flex;
+   
     align-items: center;
-    gap: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
-
+/* create a media query for screen size greater than 768px */
+@media (min-width: 768px){
+    .review-card{
+        gap: 20px;
+    }
+}
 .review-card:hover {
     transform: translateY(-3px);
     background: rgba(50, 50, 50, 0.8);
 }
 
-.reviewer-photo {
-    width: 60px;
-    height: 60px;
+.reviewer-photo1 {
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #666, #999);
+    background-image: url('https://ik.imagekit.io/praz3pxhv/images/hifell-logo.webp?updatedAt=1748346519101');
     flex-shrink: 0;
+    background-position: left;
+    
 }
+.reviewer-photo2 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .reviewer-photo2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* or 'cover' if you prefer cropping */
+  }
+  
 
+.reviewer-photo3 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-image: url('../person.png');
+    flex-shrink: 0;
+    background-position: center;
+    background-size: cover;
+    
+}
+.reviewer-photo4 {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-image: url('../biota.webp');
+    flex-shrink: 0;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
 .review-content {
     text-align: left;
 }
@@ -327,13 +369,20 @@ body {
 .quote-icon {
     color: #FFD700;
     font-size: 2rem;
-    margin-bottom: 10px;
 }
 
 .review-text {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.5;
+}
+
+.review-text span {
+    color: #00BFFF;
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
 }
 
 /* Responsive Design */
