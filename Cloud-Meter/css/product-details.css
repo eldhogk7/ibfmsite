@@ -296,8 +296,7 @@ body {
 .connectivity-icon {
     width: 70px;
     height: 70px;
-    background: #f8f9fa;
-    border-radius: 50%;
+    background: #333;    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -921,14 +920,6 @@ body {
     animation: float 3s ease-in-out infinite;
 }
 
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-}
-
-.connectivity-icon {
-    animation: pulse 2s ease-in-out infinite;
-}
 
 /* Smooth scrolling */
 html {
