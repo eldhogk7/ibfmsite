@@ -849,10 +849,9 @@ body {
         gap: 1.5rem;
     }
     
-    /* .cloud-center {
-        grid-column: 1;
-        order: -1;
-    }
+   .cloud-center{
+    display: none !important;
+   }
     
     .cloud-item.bottom-left,
     .cloud-item.bottom-right {
