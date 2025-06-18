@@ -165,7 +165,7 @@ body {
     padding: 1.2rem;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
     text-align: center;
     height: 80px;
@@ -494,11 +494,31 @@ body {
 
 .cloud-system {
     padding: 5rem 0;
-    background: #f8f9fa;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
+
+.cloud-system::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../Cloud-Display/cloud-image2.jpg');
+    background-position: center;
+    background-size: cover;
+    opacity: 0.6; /* adjust this value for desired darkness */
+    z-index: -1;
+}
+
+
+
+
 
 .container1 {
     max-width: 1400px;
@@ -513,17 +533,19 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent;    margin-bottom: 1rem;
+    color: transparent;
+    margin-bottom: 1rem;
+    color: #ffffff;
 }
 
 .cloud-system p {
     text-align: center;
-    color: #666;
     margin-bottom: 4rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
+    color: #ffffff;
 }
 
 /* Mobile and tablet layout - stacked vertically */
@@ -537,21 +559,28 @@ body {
 }
 
 .cloud-item {
-    background: white;
+    background: rgb(0 0 0 / 20%);
+    backdrop-filter: blur(10px);    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 2;
+    z-index: 100;
     width: 100%;
     max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .cloud-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    background: rgba(6, 6, 6, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .cloud-item img {
@@ -561,16 +590,35 @@ body {
     border-radius: 10px;
 }
 
+.cloud-icon {
+    font-size: 2.5rem;
+    color: #60EFFF;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(96, 239, 255, 0.5);
+}
+
+.cloud-icon-large {
+    font-size: 4rem;
+    color: #407BFF;
+    transition: all 0.3s ease;
+}
+
+.cloud-item:hover .cloud-icon,
+.cloud-item:hover .cloud-icon-large {
+    transform: scale(1.1);
+    color: #60EFFF;
+}
+
 .cloud-item span {
     display: block;
     font-weight: 500;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
 }
 
-.cloud-item small {
-    color: #666;
-    font-size: 0.8rem;
+.cloud-item:hover span {
+    color: #407BFF;
 }
 
 .cloud-center {
@@ -579,24 +627,30 @@ body {
     z-index: 1;
     order: 2;
     margin: 1rem 0;
-}
-@media (max-width: 768px) {
-    @media (max-width: 1024px) {
-        .connectivity-options {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            padding: 0 1rem;
-        }
-    }
-    .cloud-center {
-        display: none !important;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+    transition: all 0.3s ease;
+    perspective: 1000px;
 }
 
 .cloud-image {
     width: 200px !important;
     height: 150px !important;
     border-radius: 25px !important;
+    filter: none;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+.cloud-center:hover .cloud-image {
+    transform: scale(1.05);
 }
 
 /* Order items for mobile layout */
@@ -701,9 +755,10 @@ body {
     }
 
     .cloud-image {
-        width: 250px !important;
-        height: 250px !important;
+        width: 445px !important;
+        height: 350px !important;
         border-radius: 50% !important;
+        z-index: -1;
     }
 
     /* Position particles around the orbit in static circular formation */
@@ -755,7 +810,7 @@ body {
     }
 
     .cloud-item span {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .cloud-item small {

@@ -257,12 +257,11 @@ svg {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #1777E4, #60EFFF);
+  background: linear-gradient(to bottom, #60EFFF, #407BFF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* for Firefox */
-  color: transparent;
-}
+  background-clip: text;
+  color: transparent;}
 
 
 .dashboard h2 {
@@ -910,8 +909,11 @@ svg {
 .abhram_section_title {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #40c9ff;
-}
+  background: linear-gradient(to bottom, #60EFFF, #407BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;}
 
 .abhram_section_subtitle {
   font-size: 1rem;
@@ -1299,14 +1301,11 @@ svg {
   font-size: 2.5rem;
   
   margin-bottom: 20px;
-   background: linear-gradient(to bottom, #1777E4, #60EFFF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-
-            /* Optional for better browser support */
-            background-clip: text;
-            color: transparent;
-}
+  background: linear-gradient(to bottom, #60EFFF, #407BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;}
 
 .micro_codex_text p {
   font-size: 1.1rem;

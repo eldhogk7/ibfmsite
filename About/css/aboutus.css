@@ -692,7 +692,11 @@ blockquote {
 
 .team-section .section-title {
     text-align: center;
-    color: #2196f3;
+    background: linear-gradient(to bottom, #60EFFF, #407BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     margin-bottom: 60px;
 }
 

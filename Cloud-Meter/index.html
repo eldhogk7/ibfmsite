@@ -263,6 +263,31 @@
     header.classList.remove('scrolled');
   }
 });
+document.addEventListener('DOMContentLoaded', function() {
+        const cloudCenter = document.querySelector('.cloud-center');
+        const cloudImage = document.querySelector('.cloud-image');
+        
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            
+            // Calculate the center of the viewport
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            
+            // Calculate the distance from center (in pixels)
+            const deltaX = (x - centerX) / 15;
+            const deltaY = (y - centerY) / 15;
+            
+            // Apply the transform with a smooth transition
+            cloudImage.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        });
+        
+        // Reset position when mouse leaves the window
+        document.addEventListener('mouseleave', () => {
+            cloudImage.style.transform = 'translate(0, 0)';
+        });
+    });
 
   const navToggle = document.querySelector('.mobile-nav-toggle');
   const primaryNav = document.getElementById('primary-navigation');

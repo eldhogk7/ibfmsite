@@ -171,7 +171,7 @@
             
             <div class="cloud-features">
                 <div class="cloud-item" data-aos="fade-left">
-                    <img src="https://ik.imagekit.io/praz3pxhv/Cloud-Meter/cloud-report.jpg?updatedAt=1748349623129" alt="Interactive cloud dashboard interface" loading="lazy">
+                    <i class="fas fa-chart-line cloud-icon"></i>
                     <span>Interactive Dashboard</span>
                 </div>
                 
@@ -180,17 +180,17 @@
                 </div>
                 
                 <div class="cloud-item" data-aos="fade-left">
-                    <img src="https://ik.imagekit.io/praz3pxhv/Cloud-Meter/2level-notification.jpg?updatedAt=1748349623149" alt="Two-level notification system interface" loading="lazy">
+                    <i class="fas fa-bell cloud-icon"></i>
                     <span>Notification Alert System</span>
                 </div>
 
                 <div class="cloud-item bottom-right" data-aos="fade-right">
-                    <img src="https://ik.imagekit.io/praz3pxhv/Cloud-Meter/3level-account.jpg?updatedAt=1748349623001" alt="Three-level account management interface" loading="lazy">
+                    <i class="fas fa-users-cog cloud-icon"></i>
                     <span>Multiple User accounts with role based access</span>
                 </div>
 
                 <div class="cloud-item bottom-left" data-aos="fade-right">
-                    <img src="https://ik.imagekit.io/praz3pxhv/Cloud-Meter/cloud-report.jpg?updatedAt=1748349623129" alt="Detailed analytics and reporting interface" loading="lazy">
+                    <i class="fas fa-file-alt cloud-icon"></i>
                     <span>Comprehensive Reports</span>
                 </div>
             </div>
@@ -250,6 +250,31 @@
     
     <script>
         // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+        const cloudCenter = document.querySelector('.cloud-center');
+        const cloudImage = document.querySelector('.cloud-image');
+        
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            
+            // Calculate the center of the viewport
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            
+            // Calculate the distance from center (in pixels)
+            const deltaX = (x - centerX) / 15;
+            const deltaY = (y - centerY) / 15;
+            
+            // Apply the transform with a smooth transition
+            cloudImage.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        });
+        
+        // Reset position when mouse leaves the window
+        document.addEventListener('mouseleave', () => {
+            cloudImage.style.transform = 'translate(0, 0)';
+        });
+    });
         window.addEventListener('scroll', function() {
   const header = document.querySelector('.site-header');
   if (window.scrollY > 0) {
