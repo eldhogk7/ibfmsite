@@ -84,7 +84,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../../Cloud-Display/cloud-image.jpg');
+    background-image: url('https://ik.imagekit.io/b3s3mttie3/products/cloud-image.jpg?updatedAt=1750314083718');
     background-size: cover;
     background-position: center;
     opacity: 0.6;
@@ -191,29 +191,25 @@ body {
 
 }
 .image1{
-    background: url('https://ik.imagekit.io/praz3pxhv/Cloud-Meter/cloud-header.webp?updatedAt=1748598029298');
+    background: url('https://ik.imagekit.io/b3s3mttie3/Cloud-Meter/cloud-header.webp?updatedAt=1750314217755');
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
 
 }
 .image2{
-    background: url('https://ik.imagekit.io/praz3pxhv/Temperature-analyzer/temp-hero1.webp?updatedAt=1748597984842');
+    background: url('https://ik.imagekit.io/b3s3mttie3/Temperature-analyzer/temp-hero1.webp?updatedAt=1750307613252');
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
 
 }
 .image3{
-    background-image: url('https://ik.imagekit.io/praz3pxhv/Cloud-Dispaly/Cloud-Display-header-1.jpg?updatedAt=1748604436979');
+    background-image: url('https://ik.imagekit.io/b3s3mttie3/Cloud-Dispaly/Cloud-Display-header-1.jpg?updatedAt=1750314194162');
     background-attachment: scroll;
     background-size: cover;
 }
-.image4{
-    background: url('https://ik.imagekit.io/praz3pxhv/Custom-IOT/custom-iot.webp?updatedAt=1748604786989');
-    background-attachment: scroll;
-    background-size: cover;
-}
+
 
 
 .thermal-overlay {
@@ -334,7 +330,7 @@ body {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background-image: url('https://ik.imagekit.io/praz3pxhv/images/hifell-logo.webp?updatedAt=1748346519101');
+    background-image: url('https://ik.imagekit.io/b3s3mttie3/images/hifell-logo.webp?updatedAt=1750307553465');
     flex-shrink: 0;
     background-position: left;
     
@@ -358,7 +354,7 @@ body {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background-image: url('../person.png');
+    background-image: url('https://ik.imagekit.io/b3s3mttie3/products/person.png?updatedAt=1750314392982');
     flex-shrink: 0;
     background-position: center;
     background-size: cover;
@@ -368,7 +364,7 @@ body {
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background-image: url('../biota.webp');
+    background-image: url('https://ik.imagekit.io/b3s3mttie3/images/biota.png?updatedAt=1750307548746');
     flex-shrink: 0;
     background-position: left;
     background-size: contain;
