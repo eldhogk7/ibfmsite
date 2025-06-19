@@ -100,7 +100,7 @@ body {
 
 /* Hero Section Styles */
 .hero {
-    background-image: url('https://ik.imagekit.io/praz3pxhv/About/about-us-header.webp?updatedAt=1748349266762');
+    background-image: url('https://ik.imagekit.io/b3s3mttie3/About/about-us-header.webp?updatedAt=1750317313619');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -211,7 +211,7 @@ blockquote {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://ik.imagekit.io/praz3pxhv/About/vision-text-bg.png?updatedAt=1748349270441');
+    background-image: url('https://ik.imagekit.io/b3s3mttie3/About/vision-text-bg.png?updatedAt=1750317317504');
     background-size: contain;
     background-position: center;
     opacity: 0.1;
@@ -287,7 +287,7 @@ blockquote {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://ik.imagekit.io/praz3pxhv/About/mission-text-bg.png?updatedAt=1748349266637');
+    background-image: url('https://ik.imagekit.io/b3s3mttie3/About/our-mission.png?updatedAt=1750317313856');
     background-size: contain;
     background-position: center;
     opacity: 0.1;
@@ -414,20 +414,7 @@ blockquote {
     overflow: hidden; /* Prevent pseudo from overflowing */
 }
 
-.contact-query::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../contactus-banner-Photoroom.png');
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: right center; /* <- Updated this */
-    opacity: 0.7;
-    z-index: 0;
-}
+
 .glow {
     position: absolute;
     width: 320px;
@@ -907,7 +894,7 @@ blockquote {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('../faq-div-image.jpg');
+    background-image: url('https://ik.imagekit.io/b3s3mttie3/About/faq-div-image.jpg?updatedAt=1750317524801');
     background-size: cover;
     background-position: center;
     opacity: 0.2; /* Adjust image opacity here */
@@ -1059,7 +1046,7 @@ blockquote {
 
 
 .contact-section {
-    background-image: url('../conatct-bg.jpg');
+    background-image: url('https://ik.imagekit.io/b3s3mttie3/About/conatct-bg.webp?updatedAt=1750317593193');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
