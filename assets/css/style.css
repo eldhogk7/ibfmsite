@@ -317,18 +317,18 @@ ul {
 
 .badge-top {
     top: 10%;
-    left: 48%; /* Moved to top left as requested */
+    left: 50%; /* Moved to top left as requested */
     border-radius: 10px; /* Adjust the border radius for left side placement */
 }
 
 .badge-middle {
-    top: 68%; /* Position below the first image */
+    top: 69%; /* Position below the first image */
     left: 20%;
     transform: translateX(-50%);
 }
 
 .badge-bottom {
-   top: 84%;
+   top: 87%;
     right: 25%;
 }
 /* write medai query for screen size less than 993px */
