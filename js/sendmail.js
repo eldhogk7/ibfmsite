@@ -7,7 +7,7 @@ function submitForm() {
     var subject_id = document.getElementById('subject').value;
     var msg_id = document.getElementById('message').value;
     
-    var message = `email=${email_id}\nname=${name_id}\nmessage=${msg_id}\n phone=${phone_id}\nsubject=${subject_id}`;
+    var message = `data from ibfm\n\nName: ${name_id}\nEmail: ${email_id}\nPhone: ${phone_id}\nSubject: ${subject_id}\nMessage:\n${msg_id}`;
     // Check if the form is valid
     if (name_id !== '' && email_id !== '' && msg_id !== '' && phone_id !== '' && subject_id !== '') {
         // how to make a button inactive
@@ -26,7 +26,7 @@ function submitForm() {
         var xhr = new XMLHttpRequest();
 
         // Define the request method and URL
-        xhr.open('POST', 'https://benevolent-brigadeiros-fb8761.netlify.app/.netlify/functions/sendMail', true); // Update the URL to your function
+        xhr.open('POST', 'https://685e5e36e802b899737ac27c--ibfm.netlify.app/.netlify/functions/sendMail', true); // Update the URL to your function
 
         // Set the request header
         xhr.setRequestHeader('Content-Type', 'application/json');
