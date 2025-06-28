@@ -1082,6 +1082,7 @@ svg {
   justify-content: flex-end;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .abhram_app_item.reverse {
@@ -1186,6 +1187,9 @@ svg {
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+  .abhram_app_item.reverse {
+    justify-content: center;
+  }
     .swipe-indicator {
         display: flex; /* Show only on mobile */
     }
@@ -1225,6 +1229,7 @@ svg {
         flex: 0 0 auto;
         width: 300px;
         margin-right: 20px;
+        justify-content: center;
     }
 }
 
