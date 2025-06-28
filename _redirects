@@ -1,0 +1,5 @@
+# Force HTTPS
+http://ibfm.in/*   https://ibfm.in/:splat   301!
+
+# React/SPA fallback
+/*  /index.html  200
