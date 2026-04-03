@@ -1991,11 +1991,16 @@ img {
 }
 
 .footer-logo {
-  width: 70px;
-  margin-bottom: 15px;
-  background-color: white;
-  border-radius: 15px;
+  width: 140px;          /* 2x of 70px */
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  padding: 4px 10px;
+  background-color: #fff;
+  border-radius: 6px;    /* rectangular with corner rounding */
+  box-sizing: border-box;
 }
+
 
 .make-in-india-logo {
   width: 100px;
