@@ -75,20 +75,31 @@ ul {
 .logo-container {
   display: flex;
   align-items: center;
-  justify-content: center;  /* optional: centers logo inside */
-  width: 70px;             /* make sure width == height */
-  height: 40px;
-  background-color: white;
-  border-radius: 15px;
+  justify-content: flex-start;  /* optional: centers logo inside */
+  /*width: 70px;*/             /* make sure width == height */
+  /*height: 40px;*/
+  /*background-color: #fff;*/
+ /* border-radius: 6px;*/
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 4px 12px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .logo img {
-    height: 60px;
-    width: auto;
-    margin-top: 8px;
-    border-radius: 50%;
-    transition: var(--transition);
+  display: block;
+  height: 46px;
+  width: auto;
+  margin-top: 0;
+  border-radius: 4px;
 }
+
 
 /* Navigation styles */
 .main-nav {
